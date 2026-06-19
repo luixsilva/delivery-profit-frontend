@@ -7,6 +7,7 @@ interface AuthContextProps {
   login: ({ email, password }: SignInProps) => void;
   logout: () => void;
   register: ({ name, email, password }: SignUpProps) => void;
+  loading: boolean;
 }
 
 export const AuthContext = createContext<AuthContextProps | null>(null);
