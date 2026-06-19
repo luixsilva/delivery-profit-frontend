@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { AuthContext } from "@/context/auth-context";
-import { signIn } from "@/services/auth";
-import type { SignInProps } from "@/types/sign-in";
-import type { UserProps } from "@/types/user";
-import { LoadingScreen } from "@/components";
-import { me } from "@/services/auth";
-import { signOut } from "@/services/auth";
-import type { SignUpProps } from "@/types/sign-up";
-import { signUp } from "@/services/auth";
+import { AuthContext } from "context/auth-context";
+import { signIn } from "services/auth";
+import type { SignInProps } from "types/sign-in";
+import type { UserProps } from "types/user";
+import { LoadingScreen } from "components";
+import { me } from "services/auth";
+import { signOut } from "services/auth";
+import type { SignUpProps } from "types/sign-up";
+import { signUp } from "services/auth";
 
 interface AuthProviderProps {
   children: React.ReactNode;

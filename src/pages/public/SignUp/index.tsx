@@ -1,4 +1,4 @@
-import { useAuth } from "@/hooks/use-auth";
+import { useAuth } from "hooks/use-auth";
 import { EyeSlashIcon } from "@heroicons/react/16/solid";
 import {
   Button,

@@ -1,4 +1,4 @@
-import { SidebarContext } from "@/context/sidebar-context";
+import { SidebarContext } from "context/sidebar-context";
 import { useMemo, useState, type ReactNode } from "react";
 
 export function SidebarProvider({ children }: { children: ReactNode }) {

@@ -3,8 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { Avatar, Chip } from "@heroui/react";
 import {
   LayoutDashboard,
-  ShoppingBag,
-  ListTodo,
   BarChart3,
   Settings,
   HelpCircle,
@@ -12,8 +10,8 @@ import {
   Road,
   Car,
 } from "lucide-react";
-import { useSidebar } from "@/hooks/use-sidebar";
-import { useAuth } from "@/hooks/use-auth";
+import { useSidebar } from "hooks/use-sidebar";
+import { useAuth } from "hooks/use-auth";
 
 interface NavItem {
   label: string;

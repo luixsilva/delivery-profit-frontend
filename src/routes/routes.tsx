@@ -1,11 +1,11 @@
-// import PrivateLayout from "@/components/layout/private-layout";
-import SignIn from "@/pages/public/SignIn";
-// import SignUp from "@/pages/public/SignUp";
+// import PrivateLayout from "components/layout/private-layout";
+import SignIn from "pages/public/SignIn";
+// import SignUp from "pages/public/SignUp";
 import { Navigate, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./private-routes";
 import PublicRoutes from "./public-routes";
-import Dashboard from "@/pages/private/Dashboard";
-import SignUp from "@/pages/public/SignUp";
+import Dashboard from "pages/private/Dashboard";
+import SignUp from "pages/public/SignUp";
 
 export default function AppRoutes() {
   return (

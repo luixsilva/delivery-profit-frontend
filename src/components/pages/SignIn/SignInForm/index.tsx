@@ -1,5 +1,5 @@
-import { CustomButton } from "@/components/ui/Button";
-import { useAuth } from "@/hooks/use-auth";
+import { CustomButton } from "components/ui/Button";
+import { useAuth } from "hooks/use-auth";
 import { EyeSlashIcon } from "@heroicons/react/16/solid";
 import {
   Button,

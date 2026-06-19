@@ -1,10 +1,10 @@
-import Header from "@/components/layout/Header";
-import SideBar from "@/components/layout/SideBar";
-import { SidebarProvider } from "@/providers/SideBarProvider";
-// import StatCard from "@/components/Dashboard/StatCard";
-// import SalesPerformanceCard from "@/components/dashboard/SalesPerformanceCard";
-// import TrafficSourceCard from "@/components/dashboard/TrafficSourceCard";
-// import EmployeesTable from "@/components/dashboard/EmployeesTable";
+import Header from "components/layout/Header";
+import SideBar from "components/layout/SideBar";
+import { SidebarProvider } from "providers/SideBarProvider";
+// import StatCard from "components/Dashboard/StatCard";
+// import SalesPerformanceCard from "components/dashboard/SalesPerformanceCard";
+// import TrafficSourceCard from "components/dashboard/TrafficSourceCard";
+// import EmployeesTable from "components/dashboard/EmployeesTable";
 
 export default function Dashboard() {
   return (
