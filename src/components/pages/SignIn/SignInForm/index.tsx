@@ -35,7 +35,7 @@ export const SignInForm = () => {
         password: data.password,
       });
 
-      navigate("/");
+      navigate("/dashboard");
     } catch (error) {
       console.error("Login failed:", error);
     }

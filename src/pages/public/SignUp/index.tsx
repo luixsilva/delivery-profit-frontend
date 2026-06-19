@@ -60,7 +60,7 @@ export default function SignUp() {
         password: data.password,
       });
 
-      navigate("/");
+      navigate("/dashboard");
     } catch (error) {
       console.error("Create User Failed", error);
     }
