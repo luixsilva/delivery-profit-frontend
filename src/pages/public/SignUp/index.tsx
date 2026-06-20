@@ -83,18 +83,17 @@ export default function SignUp() {
         duration-500
 "
     >
-      <div className="flex flex-col gap-3">
-        <Typography className="text-xs font-medium uppercase tracking-widest text-accent">
-          Seja bem vindo(a)
-        </Typography>
+      <div className="w-full max-w-xl px-4 sm:px-6">
+        <div className="flex flex-col gap-3">
+          <Typography className="text-xs font-medium uppercase tracking-widest text-accent">
+            Seja bem vindo(a)
+          </Typography>
 
-        <Typography className="text-3xl font-semibold tracking-tight text-foreground">
-          Realize seu cadastro e aproveite todos os benefícios
-        </Typography>
-      </div>
-
-      <div className="w-xl">
-        <Form className="flex flex-col gap-5" onSubmit={onSubmit}>
+          <Typography className="text-3xl font-semibold tracking-tight text-foreground">
+            Realize seu cadastro e aproveite todos os benefícios
+          </Typography>
+        </div>
+        <Form className="flex flex-col gap-5 pt-8" onSubmit={onSubmit}>
           <div className="flex flex-col gap-1.5">
             <Label
               htmlFor="input-type-name"
