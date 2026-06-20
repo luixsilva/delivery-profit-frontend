@@ -45,11 +45,14 @@ export default function SideBar() {
       )}
 
       <aside
-        className={`h-screen fixed inset-y-0 left-0 z-40 flex h-full flex-col border-r border-zinc-900 bg-zinc-950 transition-transform duration-300 ease-in-out transform md:relative md:translate-x-0 md:z-auto ${
+        className={`h-screen fixed inset-y-0 left-0 z-40 flex flex-col border-r border-zinc-900 bg-zinc-950 transition-transform duration-300 ease-in-out transform md:relative md:translate-x-0 md:z-auto ${
           isCollapsed
             ? "-translate-x-full md:translate-x-0 md:w-20"
             : "translate-x-0 md:w-64"
-        }`}
+        } pb-6 md:pb-0`}
+        style={{
+          paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 1rem)",
+        }}
         aria-hidden={isCollapsed}
       >
         <div

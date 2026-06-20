@@ -12,10 +12,8 @@ export function UnderConstruction({
 }: UnderConstructionProps) {
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-zinc-950" />
 
-      {/* Glow */}
       <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
 
       <div className="relative w-full max-w-xl">
