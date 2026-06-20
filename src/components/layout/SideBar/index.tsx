@@ -38,14 +38,14 @@ export default function SideBar() {
     <>
       {!isCollapsed && (
         <div
-          className="fixed inset-0 z-30 block bg-black/40 md:hidden"
+          className="fixed inset-0 z-30 block bg-black/40 md:hidden "
           onClick={toggleSidebar}
           aria-hidden
         />
       )}
 
       <aside
-        className={`fixed inset-y-0 left-0 z-40 flex h-full flex-col border-r border-zinc-900 bg-zinc-950 transition-transform duration-300 ease-in-out transform md:relative md:translate-x-0 md:z-auto ${
+        className={`h-screen fixed inset-y-0 left-0 z-40 flex h-full flex-col border-r border-zinc-900 bg-zinc-950 transition-transform duration-300 ease-in-out transform md:relative md:translate-x-0 md:z-auto ${
           isCollapsed
             ? "-translate-x-full md:translate-x-0 md:w-20"
             : "translate-x-0 md:w-64"
