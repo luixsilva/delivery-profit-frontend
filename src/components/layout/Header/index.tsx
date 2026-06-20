@@ -42,7 +42,7 @@ export default function Header() {
         >
           <Bell size={18} />
         </Button>
-        <Button size="sm">Invite</Button>
+        {/* <Button size="sm">Invite</Button> */}
       </div>
     </header>
   );

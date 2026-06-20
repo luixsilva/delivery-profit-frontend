@@ -15,11 +15,16 @@ import { useNavigate } from "react-router-dom";
 
 export const SignInForm = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const { login } = useAuth();
   const navigate = useNavigate();
+  const [error, setError] = useState<string | null>(null);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    setLoading(true);
+    setError(null);
+
     e.preventDefault();
 
     try {
@@ -38,6 +43,16 @@ export const SignInForm = () => {
       navigate("/dashboard");
     } catch (error) {
       console.error("Login failed:", error);
+
+      const status = (error as any)?.response?.status;
+
+      if (status === 401) {
+        setError("Credenciais inválidas. Verifique seu email e senha.");
+      } else {
+        setError("Erro ao autenticar. Tente novamente mais tarde.");
+      }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -103,10 +118,13 @@ export const SignInForm = () => {
         </TextField>
       </div>
 
-      <CustomButton className="group mt-2 w-full">
+      <CustomButton isLoading={loading} className="group mt-2 w-full">
         Entrar
         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
       </CustomButton>
+      {error && (
+        <div className="text-sm text-danger mt-2 text-center">{error}</div>
+      )}
     </Form>
   );
 };

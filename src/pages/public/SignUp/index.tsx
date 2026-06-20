@@ -12,6 +12,7 @@ import {
 import { Eye } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { CustomButton } from "components";
 
 export default function SignUp() {
   const [isPassVisible, setIsPassVisible] = useState(false);
@@ -21,8 +22,10 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const { register } = useAuth();
+
   const navigate = useNavigate();
 
   const passwordValidation = {
@@ -42,7 +45,9 @@ export default function SignUp() {
   const isFormValid =
     name.trim().length >= 2 && !!email && isPasswordValid && passwordsMatch;
 
+  console.log("!isFormValid", !isFormValid);
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    setLoading(true);
     e.preventDefault();
     if (!isFormValid) return;
 
@@ -63,6 +68,8 @@ export default function SignUp() {
       navigate("/dashboard");
     } catch (error) {
       console.error("Create User Failed", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -222,9 +229,14 @@ export default function SignUp() {
             )}
           </TextField>
 
-          <Button type="submit" className="mt-2" isDisabled={!isFormValid}>
+          <CustomButton
+            type="submit"
+            className="mt-2"
+            isDisabled={!isFormValid}
+            isLoading={loading}
+          >
             Criar conta
-          </Button>
+          </CustomButton>
         </Form>
 
         <Typography className="text-center text-sm text-default-400 mt-6">

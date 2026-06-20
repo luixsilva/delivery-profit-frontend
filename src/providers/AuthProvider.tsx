@@ -38,6 +38,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
       await loadUser();
     } catch (error) {
       console.error("Login failed:", error);
+      throw error;
     }
   }
 
