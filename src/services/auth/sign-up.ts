@@ -2,7 +2,7 @@ import type { SignUpProps } from "types/sign-up";
 import api from "../api";
 
 export async function signUp({ name, email, password }: SignUpProps) {
-  const response = await api.post("v1/users/", {
+  const response = await api.post("/v1/users/", {
     name,
     email,
     password,
