@@ -6,9 +6,9 @@ import AppRoutes from "./routes/routes";
 
 function App() {
   return (
-    <ThemeProvider>
+    <ThemeProvider attribute="class" enableSystem defaultTheme="system">
       <AuthProvider>
-        <div className="min-h-screen w-full bg-background">
+        <div className="min-h-screen w-ful bg-background">
           <BrowserRouter>
             <AppRoutes />
           </BrowserRouter>

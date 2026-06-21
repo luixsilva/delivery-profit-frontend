@@ -9,9 +9,7 @@ export default function Dashboard() {
         </div>
 
         <div className="space-y-2">
-          <h1 className="text-2xl font-semibold text-white">
-            Dashboard em construção
-          </h1>
+          <h1 className="text-2xl font-semibol">Dashboard em construção</h1>
 
           <p className="max-w-sm text-sm text-zinc-500">
             Estamos desenvolvendo uma experiência melhor para acompanhar seus

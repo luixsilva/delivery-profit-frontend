@@ -11,7 +11,7 @@ import {
 } from "@heroui/react";
 import { ArrowRight, Eye } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const SignInForm = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -82,12 +82,12 @@ export const SignInForm = () => {
           >
             Sua senha <span className="text-danger">*</span>
           </Label>
-          <a
-            href="#"
+          <Link
+            to="/recovery-password"
             className="text-xs font-medium text-primary hover:underline"
           >
             Esqueceu a senha?
-          </a>
+          </Link>
         </div>
 
         <TextField className="w-full " name="password">

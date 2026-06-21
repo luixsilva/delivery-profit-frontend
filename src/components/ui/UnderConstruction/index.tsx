@@ -1,4 +1,4 @@
-import { Chip, Typography } from "@heroui/react";
+import { Chip } from "@heroui/react";
 import { Hammer } from "lucide-react";
 
 interface UnderConstructionProps {
@@ -12,7 +12,7 @@ export function UnderConstruction({
 }: UnderConstructionProps) {
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-zinc-950" />
+      <div className="absolute inset-0 " />
 
       <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
 
@@ -21,19 +21,15 @@ export function UnderConstruction({
           <div className="flex flex-col items-center text-center">
             <Chip className="mb-8 text-accent">Work in progress</Chip>
 
-            <div className="mb-8 flex h-20 w-20 animate-pulse items-center justify-center rounded-3xl border border-white/10 bg-white/5">
+            <div className="mb-8 flex h-20 w-20 animate-pulse items-center justify-center rounded-3xl border">
               <Hammer size={38} className="text-accent" />
             </div>
 
-            <Typography className="mb-4 text-4xl font-bold tracking-tight">
-              {title}
-            </Typography>
+            <h1 className="mb-4 text-4xl font-bold tracking-tight">{title}</h1>
 
-            <Typography className="max-w-md text-default-500">
-              {description}
-            </Typography>
+            <p className="max-w-md">{description}</p>
 
-            <div className="mt-10 flex items-center gap-2 text-sm text-default-400">
+            <div className="mt-10 flex items-center gap-2 text-sm">
               <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
               Novidades chegando em breve
             </div>

@@ -1,4 +1,5 @@
 import SignIn from "pages/public/SignIn";
+import RecoveryPassword from "pages/public/RecoveryPassword";
 import { Navigate, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./private-routes";
 import PublicRoutes from "./public-routes";
@@ -10,6 +11,7 @@ import Settings from "pages/private/Settings";
 import RoutesPage from "pages/private/Routes";
 import Insights from "pages/private/Insights";
 import HelpAndInformation from "pages/private/Help&Information";
+import NewPassword from "pages/public/NewPassword";
 
 export default function AppRoutes() {
   return (
@@ -17,6 +19,8 @@ export default function AppRoutes() {
       <Route element={<PublicRoutes />}>
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/recovery-password" element={<RecoveryPassword />} />
+        <Route path="/new-password" element={<NewPassword />} />
       </Route>
 
       <Route element={<PrivateRoute />}>

@@ -2,7 +2,7 @@ import { SignInForm } from "components/pages/SignIn/SignInForm";
 
 export default function SignIn() {
   return (
-    <div className="relative grid min-h-screen lg:grid-cols-2 bg-background">
+    <div className="relative grid min-h-screen lg:grid-cols-2">
       <div className="absolute left-6 top-6 z-10 flex items-center gap-2 lg:left-10 lg:top-10">
         <img
           src="/assets/drive-pro-icon.png"

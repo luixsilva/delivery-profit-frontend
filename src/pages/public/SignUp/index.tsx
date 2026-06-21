@@ -82,7 +82,6 @@ export default function SignUp() {
         items-center
         justify-center
         gap-8
-        bg-background
         animate-in
         fade-in
         zoom-in-0

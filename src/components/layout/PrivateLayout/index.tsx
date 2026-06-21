@@ -6,7 +6,7 @@ import { SidebarProvider } from "providers/SideBarProvider";
 export default function PrivateLayout() {
   return (
     <SidebarProvider>
-      <div className="dark flex min-h-screen w-full overflow-hidden">
+      <div className="flex min-h-screen w-full overflow-hidden">
         <SideBar />
 
         <div className="flex h-full flex-1 flex-col overflow-hidden">

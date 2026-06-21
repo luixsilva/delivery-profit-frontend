@@ -38,21 +38,18 @@ export default function SideBar() {
     <>
       {!isCollapsed && (
         <div
-          className="fixed inset-0 z-30 block bg-black/40 md:hidden "
+          className="fixed inset-0 z-30 block md:hidden "
           onClick={toggleSidebar}
           aria-hidden
         />
       )}
 
       <aside
-        className={`h-screen fixed inset-y-0 left-0 z-40 flex flex-col border-r border-zinc-900 bg-zinc-950 transition-transform duration-300 ease-in-out transform md:relative md:translate-x-0 md:z-auto ${
+        className={`h-screen fixed inset-y-0 left-0 z-40 flex flex-col border-r bg-background border-border transition-transform duration-300 ease-in-out transform md:relative md:translate-x-0 md:z-auto ${
           isCollapsed
             ? "-translate-x-full md:translate-x-0 md:w-20"
             : "translate-x-0 md:w-64"
-        } pb-6 md:pb-0`}
-        style={{
-          paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 1rem)",
-        }}
+        } pb-6 md:pb-0 shadow-2xl shadow-black/10 dark:shadow-white/10`}
         aria-hidden={isCollapsed}
       >
         <div
@@ -66,7 +63,7 @@ export default function SideBar() {
           />
           {!isCollapsed && (
             <div className="min-w-0">
-              <p className="truncate text-sm font-semibold text-white">
+              <p className="truncate text-sm font-semibol">
                 {user?.name ?? "Convidado"}
               </p>
               <p className="truncate text-xs text-zinc-500">{user?.email}</p>
@@ -83,8 +80,8 @@ export default function SideBar() {
                 to={item.href}
                 className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors ${
                   isActive
-                    ? "bg-white text-zinc-900"
-                    : "text-zinc-400 hover:bg-accent/50 hover:text-foreground"
+                    ? "bg-accent text-accent-foreground"
+                    : "text-primary hover:bg-accent/50 hover:text-foreground"
                 } ${isCollapsed ? "justify-center" : ""}`}
               >
                 <item.icon size={18} className="shrink-0" />
@@ -107,10 +104,10 @@ export default function SideBar() {
           })}
         </nav>
 
-        <div className="flex flex-col gap-1 border-t border-zinc-900 px-3 py-4">
+        <div className="flex flex-col gap-1 border-t px-3 py-4">
           <Link
             to="/help"
-            className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-400 transition-colors hover:bg-zinc-900 hover:text-white ${
+            className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-accent hover:text-foreground ${
               isCollapsed ? "justify-center" : ""
             }`}
           >
@@ -119,7 +116,7 @@ export default function SideBar() {
           </Link>
           <button
             onClick={() => logout()}
-            className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-zinc-400 transition-colors hover:bg-zinc-900 hover:text-white ${
+            className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-primary transition-colors hover:bg-accent hover:text-foreground ${
               isCollapsed ? "justify-center" : ""
             }`}
           >
