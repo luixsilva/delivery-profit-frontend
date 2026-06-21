@@ -45,11 +45,11 @@ export default function SideBar() {
       )}
 
       <aside
-        className={`h-screen fixed inset-y-0 left-0 z-40 flex flex-col border-r bg-background border-border transition-transform duration-300 ease-in-out transform md:relative md:translate-x-0 md:z-auto ${
+        className={`h-dvh fixed inset-y-0 left-0 z-40 flex flex-col border-r bg-background border-border transition-transform duration-300 ease-in-out transform md:relative md:translate-x-0 md:z-auto ${
           isCollapsed
             ? "-translate-x-full md:translate-x-0 md:w-20"
             : "translate-x-0 md:w-64"
-        } pb-6 md:pb-0 shadow-2xl shadow-black/10 dark:shadow-white/10`}
+        } shadow-2xl shadow-black/10 dark:shadow-white/10`}
         aria-hidden={isCollapsed}
       >
         <div
@@ -104,7 +104,7 @@ export default function SideBar() {
           })}
         </nav>
 
-        <div className="flex flex-col gap-1 border-t px-3 py-4">
+        <div className="flex flex-col gap-1 border-t px-3 py-4 pb-[calc(1rem+env(safe-area-inset-bottom))]">
           <Link
             to="/help"
             className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-accent hover:text-foreground ${
